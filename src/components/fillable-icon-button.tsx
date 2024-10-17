@@ -3,19 +3,19 @@
 import React, { useState } from 'react'
 import { Heart } from 'lucide-react'
 
-interface FillableIconButtonProps {
+interface FillableButtonProps {
   size?: 'sm' | 'md' | 'lg' | 'xl'
   background?: string
   fillBackground?: string
   maxClicks?: number
 }
 
-export function FillableIconButtonComponent({
+export function FillableButton({
   size = 'lg',
   background = 'bg-gray-200',
   fillBackground = 'bg-blue-500',
   maxClicks = 8
-}: FillableIconButtonProps = {}) {
+}: FillableButtonProps = {}) {
   const [clicks, setClicks] = useState(0)
 
   const handleClick = () => {
